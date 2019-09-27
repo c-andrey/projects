@@ -10,3 +10,4 @@ Project 2: made it as a test for a company
 link to access: https://turing.pro.br/andrey/testeM3
 
 still missing some funcionalities on mobile media query, but it has filters, orders and shopping cart all functionals
+made it with CSS GRID LAYOUT and pure JavaScript
