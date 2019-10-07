@@ -10,3 +10,5 @@ Project 2: made it with CSS GRID LAYOUT and pure JavaScript, for a test for a co
 link to access: https://turing.pro.br/andrey/testeM3
 
 updates: still missing some funcionalities on mobile media query, but it has filters, orders and shopping cart all functionals
+
+Project 3: learning API RESTful using node.js as server side with express.js, mongodb, bodyparser, morgan and mongoose
