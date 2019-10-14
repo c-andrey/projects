@@ -7,34 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="/api/users" method="POST">
-        <label for="code">Código: </label>
-        <input type="text" size="10" name="code" placeholder="Digite o código do produto"><br>
-        <label for ="name">Nome: </label>
-        <input type="text" size="50" name="name" placeholder="Digite o nome do produto"><br>
-        <label for="price">Preço: R$</label>
-        <input type="text" size="10" name="price" placeholder="00,00"><br>
-        <label for="portions">Parcelas: </label>
-        <input type="number" size="2" name="portions"><br>
-        <label>Tamanhos</label><br>
-        <label>P <input type="checkbox" name="sizes" value="S"></label>
-        <label>M <input type="checkbox" name="sizes" value="M"></label>
-        <label>G <input type="checkbox" name="sizes" value="G"></label><br>
-        <label>GG <input type="checkbox" name="sizes" value="GG"></label>
-        <label>36 <input type="checkbox" name="sizes" value="36"></label>
-        <label>38 <input type="checkbox" name="sizes" value="38"></label><br>
-        <label>40 <input type="checkbox" name="sizes" value="40"></label>
-        <label>42 <input type="checkbox" name="sizes" value="42"></label>
-        <label>44 <input type="checkbox" name="sizes" value="44"></label><br>
-        <label>46 <input type="checkbox" name="sizes" value="46"></label>
-        <label>Cores</label><br>
-        <label>Amarelo <input type="checkbox" name="colors" value="yellow"></label>
-        <label>Azul <input type="checkbox" name="colors" value="blue"></label>
-        <label>Branco <input type="checkbox" name="colors" value="white"></label><br>
-        <label>Cinza <input type="checkbox" name="colors" value="grey"></label>
-        <label>Laranja <input type="checkbox" name="colors" value="orange"></label>
-        <button type="submit" name="enviar" id="btnEnviar">Enviar</button>
-
-    </form>
+    
+    <a href="/api/products"><button type="button">Get products</button></a>
 </body>
 </html>
