@@ -1,0 +1,122 @@
+*{
+	padding:0;
+	margin:0;
+	vertical-align:baseline;
+	list-style:none;
+	border:0;
+}
+body {
+	width:100%;
+}
+/* grid */
+.container{
+	width:90%;
+}
+.header {
+	grid-area:header;
+	
+}
+.nav {
+	grid-area:nav;
+}
+.menu-principal{
+	grid-area:menu-principal;
+}
+.menu-secundario{
+	grid-area:menu-secundario;
+}
+.menu-imagens{
+	grid-area:menu-imagens;
+}
+.empresa{
+	grid-area:empresa;
+}
+.contato{
+	grid-area:contato;
+}
+.footer{
+	grid-area:footer;
+}
+.grid {
+	display:grid;
+	margin: 0 auto;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: 80px 57px 450px 250px 140px auto ;
+	grid-template: 	"header header header header header"
+					"nav nav nav nav nav "
+					"menu-principal menu-principal menu-principal menu-principal menu-principal"
+					"menu-secundario menu-secundario menu-secundario menu-secundario menu-secundario"
+					"menu-imagens menu-imagens menu-imagens menu-imagens menu-imagens"
+					"empresa empresa empresa empresa empresa"
+					"contato contato contato contato contato "
+					"footer footer footer footer footer ";
+}
+
+/* design */
+.header {
+	text-align:center;
+	padding: 10px;
+}
+.nav {
+	padding:10px;
+	text-align:center;
+}
+.nav ul {
+	display:flex;
+	flex-wrap: wrap;
+	justify-content:space-between;
+	align-items:center;
+	height:100%;
+	background-color: black;
+	border-radius:10px;
+	}
+.nav ul li {
+	flex-grow:1;	
+	flex-basis: auto;
+}
+.nav ul li a{
+	display:block;
+	text-decoration:none;
+	color:white;
+	font-size: 22px;
+	padding: 13px 64px;	
+	border: 3px solid transparent;	
+}
+.nav ul li a:hover{
+	border: 3px solid grey;
+	border-radius:10px;
+}
+.menu-principal .img-a {
+  height: 400px;
+  margin: 0 auto;
+  -webkit-animation-name: imagem;
+          animation-name: imagem;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes imagem {
+  0% {
+    background-image: url(../img/1.jpg);
+  }
+  50% {
+    background-image: url(../img/2.jpg);
+  }
+  100% {
+    background-image: url(../img/1.jpg);
+  }
+}
+
+@keyframes imagem {
+  0% {
+    background-image: url(../img/1.jpg);
+  }
+  50% {
+    background-image: url(../img/2.jpg);
+  }
+  100% {
+    background-image: url(../img/1.jpg);
+  }
+}
