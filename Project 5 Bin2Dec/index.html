@@ -1,18 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bin2Dec</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script src="main.js"></script>
+    <title>Bin2Dec - Binary to Decimal Converter</title>
 </head>
+
 <body>
     <div class="container">
-        <h1>Bin2Dec</h1>
-        <h3>Binary to Decimal Converter</h3>
+        <form class="form">
 
-        <div class="input">
-            <input type="number" class=""
-        </div>
+            <h1>Bin2Dec</h1>
+            <h3>Binary to Decimal Converter</h3>
+
+            <div class="input">
+                <div>
+                    <label for="binary">Enter the Binary:</label><input type="text" id="binary" name="binary"
+                        class="input-input" autofocus maxlength="8" oninput="verifyBinary()" />
+                </div>
+                <span id="validation" class="notify hide">Only 0 or 1</span>
+            </div>
+
+            <div class="output">
+                Decimal: <input type="text" id="decimal" name="decimal" class="output-input" disabled>
+            </div>
+
+            <div class="convert">
+                <button type="button" id="btn-convert" class="btn-convert" onclick="convert()">Convert</button>
+            </div>
+        </form>
     </div>
 </body>
+
 </html>
