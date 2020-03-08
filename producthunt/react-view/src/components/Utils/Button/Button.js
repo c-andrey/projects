@@ -1,13 +1,11 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export default class Button extends Component {
-  state = {
-    value: 'Botão',
-  }
+import './styles.css'
 
-  render() {
-    return (
-      <button>asd</button>
-    )
-  }
+export default function Button(props) {
+  return (
+    <div className="button-c">
+      <button type={props.type} disabled={props.disabled} onClick={props.action}>{props.value}</button>
+    </div>
+  )
 }

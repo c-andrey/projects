@@ -1,0 +1,36 @@
+.product-store {
+  max-width: 700;
+  margin: 20px auto 0;
+  padding: 0 20px;
+}
+
+.product-store form {
+  width: 100%;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-store form div {
+  width: 50%;
+  margin: 15px ;
+  font-size: 20px;
+  display: flex;  
+}
+
+.product-store label {
+  margin-left: 10px;
+  display: flex;
+  flex: 0.3;
+}
+
+.product-store .input {
+  display: flex;
+  flex: 0.7;
+}

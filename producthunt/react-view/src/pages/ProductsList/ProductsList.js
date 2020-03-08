@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import api from "../../services/api";
 import { Link } from 'react-router-dom'
 
+import Button from '../../components/Utils/Button/Button'
+
 import "./styles.css";
 
 export default class ProductsList extends Component {
@@ -24,7 +26,7 @@ export default class ProductsList extends Component {
   };
 
   prevPage = () => {
-    const { page, productInfo } = this.state
+    const { page } = this.state
 
     if (page === 1) return
 
@@ -56,8 +58,8 @@ export default class ProductsList extends Component {
           </article>
         ))}
         <div className="actions">
-          <button disabled={page === 1} onClick={this.prevPage}>Anterior</button>
-          <button disabled={page === productInfo.pages} onClick={this.nextPage}>Próximo</button>
+          <Button disabled={page === 1} action={this.prevPage} value="Anterior"/>
+          <Button disabled={page === productInfo.pages} action={this.nextPage} value="Próximo"/>
         </div>
 
       </div>
