@@ -1,12 +1,19 @@
-# projects
-Some projects that I made by myself to training
+# personal projects
 
-Project 1: i've made using only HTML and CSS. 
+Project 1: A single website made with just html and css
 
-updates: missing responsive to some "widths", i'm trying to fix it.
+updates: changing to grid layout
 
-Project 2: made it with CSS GRID LAYOUT and pure JavaScript, for a test for a company
+Project 2: A e-commerce page using plain javascript, with grid layout on CSS
 
 updates: still missing some funcionalities on mobile media query, but it has filters, orders and shopping cart all functionals
 
-Project 3: learning API RESTful using node.js as server side with express.js, mongodb, bodyparser, morgan and mongoose
+Project 3: basic API on node, using mongoose
+
+updates: still doing the frontend and finishing crud
+
+Bin2Dec: A binary to decimal converter very simple with JS
+
+ProductHunt: A website made with React to frontend and Node to backend
+
+updates: crud on backend done, frontend just listing all products and their description
