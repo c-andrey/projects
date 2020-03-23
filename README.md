@@ -17,3 +17,5 @@ Bin2Dec: A binary to decimal converter very simple with JS
 ProductHunt: A website made with React to frontend and Node to backend
 
 updates: crud on backend done, frontend just listing all products and their description
+
+TwitterCP: A copy from twitter where you put your username and tweets
