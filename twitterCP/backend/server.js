@@ -24,5 +24,5 @@ app.use(express.json());
 app.use(require("./src/routes"));
 
 server.listen(3000, () => {
-  console.log("Server started on port 3000");
+  console.log(":) Server started on port 3000");
 });

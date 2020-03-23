@@ -8,19 +8,39 @@ import {
   KeyboardAvoidingView,
 } from 'react-native';
 
-import AsyncStorage from '@react-native-community/async-storage'
+import AsyncStorage from '@react-native-community/async-storage';
 
 import Icon from 'react-native-vector-icons/FontAwesome';
-import { StackActions, NavigationActions, NavigationScreenProp, NavigationParams, NavigationAction } from 'react-navigation';
-import { NavigationState, CommonActions } from '@react-navigation/native';
+import { NavigationScreenProp } from 'react-navigation';
+import {
+  NavigationState,
+  CommonActions,
+  RouteProp,
+} from '@react-navigation/native';
+import { StackNavigationProp } from '@react-navigation/stack';
 
 interface IUser {
   username: string;
 }
 
+type RootStackParamList = {
+  Login: undefined;
+  Timeline: undefined;
+  New: undefined;
+};
+
+type LoginScreenNavigationProp = StackNavigationProp<
+  RootStackParamList,
+  'Login'
+>;
+type LoginScreenRouteProp = RouteProp<RootStackParamList, 'Login'>;
+
 interface Props {
-  navigation: NavigationScreenProp<NavigationAction, NavigationParams>
+  navigation: LoginScreenNavigationProp;
+  route: LoginScreenRouteProp;
 }
+
+// type Navigation = NavigationScreenProp<NavigationState, NavigationParams>;
 
 export default class Login extends Component<Props, IUser> {
   public state: IUser;
@@ -37,8 +57,8 @@ export default class Login extends Component<Props, IUser> {
   }
 
   async componentDidMount() {
+    AsyncStorage.clear()
     const username = await AsyncStorage.getItem('@GoTwitter:username');
-    // AsyncStorage.clear()
 
     if (username) {
       this.navigateToTimeline();
@@ -48,9 +68,7 @@ export default class Login extends Component<Props, IUser> {
   navigateToTimeline = () => {
     const resetAction = CommonActions.reset({
       index: 0,
-      routes: [
-        { name: 'Timeline' }
-      ],
+      routes: [{ name: 'Timeline' }],
     });
 
     this.props.navigation.dispatch(resetAction);
