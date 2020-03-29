@@ -1,15 +1,15 @@
 import { NavigationContainer } from '@react-navigation/native';
 import {
   CardStyleInterpolators,
-  createStackNavigator,
+  createStackNavigator
 } from '@react-navigation/stack';
 import React from 'react';
 import Detail from './pages/Detail/Detail';
-import Incidents from './pages/Incidents/Incidents';
+import Incidents, { Incident } from './pages/Incidents/Incidents';
 
 type RootStackParamList = {
-  Incidents: typeof Incidents;
-  Detail: typeof Detail;
+  Incidents: undefined;
+  Detail: { incident: Incident };
 };
 
 export interface RoutesProps {}
